@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>CRYP</title>
+</head>
+<body>
+    <section>
+    <div class="coinListContainer">
+        <% for(var i=0;i<coinList.length;++i) { %>
+            <ul class="coinList">
+                <li class="numbering">
+                    <span><img src="/images/Star.png"></span> <%= i+1 %>
+                </li>
+                    <li class="icon">
+                        <img src= <%= `https://www.cryptocompare.com/${coinList[i]["CoinInfo"]["ImageUrl"]}` %> >
+                        <%= coinList[i]["CoinInfo"]["FullName"] %>
+                    </li>
+                    <li class="name">
+                        
+                    </li>
+                    <li class="symbol">
+                        <%= coinList[i]["CoinInfo"]["Name"] %>
+                    </li>
+                    <li class="max_supply">
+                        <%= coinList[i]["RAW"]["USD"]["PRICE"] %>
+                    </li>
+            </ul>
+            <% } %>
+</div>
+</section>
+</body>
+</html>
